@@ -20,3 +20,9 @@ steps:
     testResultsFiles: '**/*.trx'
 
 - task: PublishBuildArtifacts@1
+
+- task: AzureRmWebAppDeployment@3
+  inputs:
+    azureSubscription: 'ServiceConnectionToDevOpsWow86c7'
+    WebAppName: 'AzureWebApp86c7 '
+    Package: $(System.ArtifactsDirectory)/**/*.zip
