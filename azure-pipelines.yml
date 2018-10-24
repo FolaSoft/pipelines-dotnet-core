@@ -23,6 +23,6 @@ steps:
 
 - task: AzureRmWebAppDeployment@3
   inputs:
-    azureSubscription: 'ServiceConnectionToDevOpsWow86c7'
+    azureSubscription: 'ConnectDevOpsWow86c7'
     WebAppName: 'AzureWebApp86c7 '
     Package: $(System.ArtifactsDirectory)/**/*.zip
