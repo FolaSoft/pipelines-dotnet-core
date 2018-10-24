@@ -19,7 +19,8 @@ steps:
     testResultsFiles: '**/*.trx'
 
 - task: PublishBuildArtifacts@1
-  artifactName: 'drop1'
+  inputs:
+    artifactName: 'drop1'
 
 - task: DotNetCoreCLI@2
   inputs:
