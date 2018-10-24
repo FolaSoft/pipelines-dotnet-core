@@ -7,12 +7,13 @@ pool:
   
 variables:
   buildConfiguration: 'Release'
-
+## dotnet publish --configuration $(buildConfiguration) --output $BUILD_ARTIFACTSTAGINGDIRECTORY 
 steps:
 - script: |
     dotnet build --configuration $(buildConfiguration)
     dotnet test dotnetcore-tests --configuration $(buildConfiguration) --logger trx
-    dotnet publish --configuration $(buildConfiguration) --output $BUILD_ARTIFACTSTAGINGDIRECTORY
+    
+    
 
 - task: PublishTestResults@2
   inputs:
